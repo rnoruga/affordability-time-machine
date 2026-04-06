@@ -1,6 +1,8 @@
 import json
 import os
 
+STARTER_HOME_RATIO = 0.82  # NAR entry-level coefficient, fixed ratio — see docs
+
 
 def load_json(relative_path):
     path = os.path.join(os.path.dirname(__file__), relative_path)
@@ -22,9 +24,20 @@ def calculate_affordability(price, income, rate):
     return ratio, round(monthly, 0), burden
 
 
-def calculate_profiles(price, rate, salaries, city, year):
+def get_income_tier(salary, median_income):
+    relative = round(salary / median_income, 2)
+    if relative < 0.8:
+        tier = "working_class"
+    elif relative <= 1.5:
+        tier = "middle_class"
+    else:
+        tier = "upper_middle"
+    return tier, relative
+
+
+def calculate_profiles(price, rate, salaries, city, year, median_income):
     occupations = load_json("../data/static/occupations.json")
-    households = load_json("../data/static/households.json")
+    households  = load_json("../data/static/households.json")
 
     results = []
 
@@ -47,11 +60,18 @@ def calculate_profiles(price, rate, salaries, city, year):
             continue
 
         base_salary = salary_entry["salary"]
+        income_tier, relative_to_median = get_income_tier(base_salary, median_income)
 
         for hh in households:
             effective_income = base_salary * hh["multiplier"]
-            ratio, monthly, burden = calculate_affordability(
-                price, effective_income, rate
+
+            # median home
+            ratio, monthly, burden = calculate_affordability(price, effective_income, rate)
+
+            # starter home
+            starter_price = round(price * STARTER_HOME_RATIO)
+            starter_ratio, starter_monthly, starter_burden = calculate_affordability(
+                starter_price, effective_income, rate
             )
 
             if burden <= 28:
@@ -60,6 +80,13 @@ def calculate_profiles(price, rate, salaries, city, year):
                 affordability_status = "stretch"
             else:
                 affordability_status = "unaffordable"
+
+            if starter_burden <= 28:
+                starter_affordability = "comfortable"
+            elif starter_burden <= 38:
+                starter_affordability = "stretch"
+            else:
+                starter_affordability = "unaffordable"
 
             context_flags = []
             if hh["multiplier"] == 1.0:
@@ -77,10 +104,22 @@ def calculate_profiles(price, rate, salaries, city, year):
                 "base_salary":          base_salary,
                 "effective_income":     round(effective_income, 0),
                 "salary_confidence":    salary_entry["confidence"],
-                "price_to_income":      ratio,
-                "monthly_payment":      monthly,
-                "burden_pct":           burden,
-                "affordability_status": affordability_status,
+                "income_tier":          income_tier,
+                "relative_to_median":   relative_to_median,
+                "median_home": {
+                    "price":                price,
+                    "price_to_income":      ratio,
+                    "monthly_payment":      monthly,
+                    "burden_pct":           burden,
+                    "affordability_status": affordability_status,
+                },
+                "starter_home": {
+                    "price":                starter_price,
+                    "price_to_income":      starter_ratio,
+                    "monthly_payment":      starter_monthly,
+                    "burden_pct":           starter_burden,
+                    "affordability_status": starter_affordability,
+                },
                 "context_flags":        context_flags
             })
 
@@ -93,21 +132,22 @@ def run_calculations(raw_data):
     results = []
 
     for entry in raw_data:
-        city  = entry["city"]
-        year  = entry["year"]
-        price = entry["median_home_price"]
+        city   = entry["city"]
+        year   = entry["year"]
+        price  = entry["median_home_price"]
         income = entry["median_household_income"]
-        rate  = entry["mortgage_rate"]
+        rate   = entry["mortgage_rate"]
 
         ratio, monthly, burden = calculate_affordability(price, income, rate)
 
-        profiles = calculate_profiles(price, rate, salaries, city, year)
+        profiles = calculate_profiles(price, rate, salaries, city, year, income)
 
         results.append({
             "city":  city,
             "year":  year,
             "market": {
                 "median_home_price":       price,
+                "starter_home_price":      round(price * STARTER_HOME_RATIO),
                 "median_household_income": income,
                 "mortgage_rate":           rate,
                 "price_to_income":         ratio,
