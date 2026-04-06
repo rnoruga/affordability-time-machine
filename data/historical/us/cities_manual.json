@@ -1,0 +1,178 @@
+[
+  {
+    "city": "Los Angeles",
+    "state": "06",
+    "county": "037",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 16700,
+        "median_household_income": 6600,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 94000,
+        "median_household_income": 23000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "New York",
+    "state": "36",
+    "county": "047",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 15800,
+        "median_household_income": 6100,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 78000,
+        "median_household_income": 21000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "Chicago",
+    "state": "17",
+    "county": "031",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 13800,
+        "median_household_income": 6800,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 72000,
+        "median_household_income": 24000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "Houston",
+    "state": "48",
+    "county": "201",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 10200,
+        "median_household_income": 5800,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 64000,
+        "median_household_income": 22500,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "San Francisco",
+    "state": "06",
+    "county": "075",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 21000,
+        "median_household_income": 7200,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 112000,
+        "median_household_income": 25000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "Seattle",
+    "state": "53",
+    "county": "033",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 14500,
+        "median_household_income": 6500,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 76000,
+        "median_household_income": 24500,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "Miami",
+    "state": "12",
+    "county": "086",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 12000,
+        "median_household_income": 5500,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 68000,
+        "median_household_income": 19000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  },
+  {
+    "city": "Phoenix",
+    "state": "04",
+    "county": "013",
+    "api_available": [2000, 2020],
+    "historical": [
+      {
+        "year": 1960,
+        "median_home_price": 11500,
+        "median_household_income": 6000,
+        "source": "Census 1960 SF3",
+        "confidence": "reconstructed"
+      },
+      {
+        "year": 1980,
+        "median_home_price": 66000,
+        "median_household_income": 21000,
+        "source": "Census 1980 SF3",
+        "confidence": "reconstructed"
+      }
+    ]
+  }
+]

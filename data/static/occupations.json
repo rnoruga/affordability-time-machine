@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mailman",
+    "label": "Mail Carrier",
+    "model": "mailman.glb",
+    "description": "A classic middle-class occupation, present across all decades"
+  },
+  {
+    "id": "teacher",
+    "label": "School Teacher",
+    "model": "teacher.glb",
+    "description": "Universal symbol of the middle class"
+  },
+  {
+    "id": "nurse",
+    "label": "Nurse",
+    "model": "nurse.glb",
+    "description": "Growing profession with consistent demand"
+  },
+  {
+    "id": "programmer",
+    "label": "Software Developer",
+    "model": "programmer.glb",
+    "description": "Counter-example: who actually won in the modern economy"
+  },
+  {
+    "id": "cook",
+    "label": "Cook / Chef",
+    "model": "cook.glb",
+    "description": "Service industry, lower income bracket"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1960s",
+    "year": 1960,
+    "label": "Post-War Era",
+    "color_mode": "grayscale",
+    "palette": ["#e8e8e8", "#a0a0a0", "#404040"],
+    "description": "The golden age of middle-class homeownership"
+  },
+  {
+    "id": "1980s",
+    "year": 1980,
+    "label": "Reagan Era",
+    "color_mode": "sepia",
+    "palette": ["#c9a87c", "#8b6340", "#3d2b1a"],
+    "description": "High mortgage rates crushed affordability despite lower prices"
+  },
+  {
+    "id": "2000s",
+    "year": 2000,
+    "label": "Dot-Com Era",
+    "color_mode": "muted",
+    "palette": ["#b8c4bb", "#6b8f71", "#2d4a32"],
+    "description": "Markets begin to diverge between coastal and inland cities"
+  },
+  {
+    "id": "2020s",
+    "year": 2020,
+    "label": "Today",
+    "color_mode": "color",
+    "palette": ["#4f86c6", "#e8534a", "#2ecc71"],
+    "description": "Historic low rates masked record-high prices"
+  }
+]

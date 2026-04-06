@@ -1,0 +1,26 @@
+[
+  {
+    "id": "single",
+    "label": "Single",
+    "multiplier": 1.0,
+    "description": "One income, no dependents"
+  },
+  {
+    "id": "couple",
+    "label": "Couple, both working",
+    "multiplier": 1.6,
+    "description": "Two incomes, no children"
+  },
+  {
+    "id": "family_1kid",
+    "label": "Couple + 1 child",
+    "multiplier": 1.6,
+    "description": "Two incomes, one child"
+  },
+  {
+    "id": "family_3kids",
+    "label": "Couple + 3 children, one income",
+    "multiplier": 1.0,
+    "description": "One income, three dependents"
+  }
+]
