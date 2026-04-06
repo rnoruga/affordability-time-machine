@@ -32,14 +32,14 @@ def calculate_profiles(price, rate, salaries, city, year):
         salary_entry = next(
             (s for s in salaries
              if s["occupation_id"] == occ["id"]
-                and s["city"] == city
-                and s["year"] == year),
+             and s["city"] == city
+             and s["year"] == year),
             None
         ) or next(
             (s for s in salaries
              if s["occupation_id"] == occ["id"]
-                and s["city"] == "all"
-                and s["year"] == year),
+             and s["city"] == "all"
+             and s["year"] == year),
             None
         )
 
@@ -54,20 +54,34 @@ def calculate_profiles(price, rate, salaries, city, year):
                 price, effective_income, rate
             )
 
-            can_afford = burden <= 35
+            if burden <= 28:
+                affordability_status = "comfortable"
+            elif burden <= 38:
+                affordability_status = "stretch"
+            else:
+                affordability_status = "unaffordable"
+
+            context_flags = []
+            if hh["multiplier"] == 1.0:
+                context_flags.append("one_income")
+            if "kid" in hh["id"]:
+                context_flags.append("has_dependents")
+            if hh["id"] == "family_3kids" and hh["multiplier"] == 1.0:
+                context_flags.append("high_dependency")
 
             results.append({
-                "occupation_id":  occ["id"],
-                "occupation_label": occ["label"],
-                "household_id":   hh["id"],
-                "household_label": hh["label"],
-                "base_salary":    base_salary,
-                "effective_income": round(effective_income, 0),
-                "salary_confidence": salary_entry["confidence"],
-                "price_to_income": ratio,
-                "monthly_payment": monthly,
-                "burden_pct":     burden,
-                "can_afford":     can_afford
+                "occupation_id":        occ["id"],
+                "occupation_label":     occ["label"],
+                "household_id":         hh["id"],
+                "household_label":      hh["label"],
+                "base_salary":          base_salary,
+                "effective_income":     round(effective_income, 0),
+                "salary_confidence":    salary_entry["confidence"],
+                "price_to_income":      ratio,
+                "monthly_payment":      monthly,
+                "burden_pct":           burden,
+                "affordability_status": affordability_status,
+                "context_flags":        context_flags
             })
 
     return results
@@ -79,11 +93,11 @@ def run_calculations(raw_data):
     results = []
 
     for entry in raw_data:
-        city = entry["city"]
-        year = entry["year"]
+        city  = entry["city"]
+        year  = entry["year"]
         price = entry["median_home_price"]
         income = entry["median_household_income"]
-        rate = entry["mortgage_rate"]
+        rate  = entry["mortgage_rate"]
 
         ratio, monthly, burden = calculate_affordability(price, income, rate)
 
