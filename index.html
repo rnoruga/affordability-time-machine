@@ -6,13 +6,17 @@
   <style>
     body { font-family: monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; }
     select { margin: 4px; padding: 4px; }
+    .toggle { margin: 4px; padding: 4px 10px; cursor: pointer; border: 1px solid #999; background: #eee; }
+    .toggle.active { background: #333; color: white; border-color: #333; }
     #result { margin-top: 24px; border-top: 1px solid #ccc; padding-top: 16px; }
     .profile { margin: 8px 0; padding: 8px; background: #f5f5f5; }
-    .can { color: green; } .cannot { color: red; }
+    .comfortable { color: green; } .stretch { color: orange; } .unaffordable { color: red; }
+    .model-note { font-size: 0.8em; color: #999; margin-top: 4px; }
   </style>
 </head>
 <body>
   <h1>Affordability Time Machine</h1>
+  <p class="model-note">This model measures housing cost relative to income. Taxes, childcare, and spending are intentionally excluded.</p>
 
   <label>City:
     <select id="city"></select>
@@ -23,11 +27,22 @@
   <label>Occupation:
     <select id="occupation"></select>
   </label>
+  <label>Segment:
+    <select id="segment">
+      <option value="median_home">Median home</option>
+      <option value="starter_home">Starter home</option>
+    </select>
+  </label>
+  <span style="margin-left:12px;">
+    <button class="toggle active" id="toggle-single" onclick="setIncome('single')">Single income</button>
+    <button class="toggle" id="toggle-dual" onclick="setIncome('dual')">+ Dual income</button>
+  </span>
 
   <div id="result"></div>
 
   <script>
     let data = [];
+    let incomeType = 'single';
 
     fetch('output/results.json')
       .then(r => r.json())
@@ -36,6 +51,13 @@
         populate();
         render();
       });
+
+    function setIncome(type) {
+      incomeType = type;
+      document.getElementById('toggle-single').classList.toggle('active', type === 'single');
+      document.getElementById('toggle-dual').classList.toggle('active', type === 'dual');
+      render();
+    }
 
     function populate() {
       const cities = [...new Set(data.map(d => d.city))];
@@ -46,7 +68,7 @@
       fill('year', years);
       fill('occupation', occs);
 
-      ['city','year','occupation'].forEach(id =>
+      ['city', 'year', 'occupation', 'segment'].forEach(id =>
         document.getElementById(id).addEventListener('change', render)
       );
     }
@@ -60,44 +82,55 @@
       });
     }
 
+    function statusIcon(status) {
+      if (status === 'comfortable') return '✅';
+      if (status === 'stretch') return '⚠️';
+      return '❌';
+    }
+
     function render() {
-      const city = document.getElementById('city').value;
-      const year = +document.getElementById('year').value;
-      const occ  = document.getElementById('occupation').value;
+      const city    = document.getElementById('city').value;
+      const year    = +document.getElementById('year').value;
+      const occ     = document.getElementById('occupation').value;
+      const segment = document.getElementById('segment').value;
 
       const entry = data.find(d => d.city === city && d.year === year);
       if (!entry) return;
 
       const m = entry.market;
-      const profiles = entry.profiles.filter(p => p.occupation_id === occ);
+      const profile = entry.profiles.find(p =>
+        p.occupation_id === occ && p.household_id === incomeType
+      );
 
       let html = `
         <h2>${city} · ${year}</h2>
         <p>
           Median home: <b>$${m.median_home_price.toLocaleString()}</b> ·
+          Starter home: <b>$${m.starter_home_price.toLocaleString()}</b> ·
           Median income: <b>$${m.median_household_income.toLocaleString()}</b> ·
           Mortgage rate: <b>${m.mortgage_rate}%</b> ·
-          Price-to-income: <b>${m.price_to_income}x</b> ·
-          Monthly payment: <b>$${m.monthly_payment.toLocaleString()}</b> ·
-          Burden: <b>${m.burden_pct}%</b>
+          Price-to-income: <b>${m.price_to_income}x</b>
           <span style="color:gray;font-size:0.85em">[${m.confidence}]</span>
         </p>
-        <h3>${occ} — household scenarios</h3>
       `;
 
-      profiles.forEach(p => {
-        const cls = p.can_afford ? 'can' : 'cannot';
-        const icon = p.can_afford ? '✅' : '❌';
+      if (!profile) {
+        html += `<p style="color:red">No data for this combination.</p>`;
+      } else {
+        const seg = profile[segment];
+        const status = seg.affordability_status;
         html += `
           <div class="profile">
-            ${icon} <b>${p.household_label}</b>
-            · salary $${p.base_salary.toLocaleString()}
-            · effective $${p.effective_income.toLocaleString()}
-            · ratio <b>${p.price_to_income}x</b>
-            · burden <span class="${cls}"><b>${p.burden_pct}%</b></span>
+            ${statusIcon(status)}
+            <b>${profile.household_label}</b>
+            · salary $${profile.base_salary.toLocaleString()}
+            · effective $${profile.effective_income.toLocaleString()}
+            · tier <b>${profile.income_tier}</b> (${profile.relative_to_median}× median)
+            · ratio <b>${seg.price_to_income}x</b>
+            · burden <span class="${status}"><b>${seg.burden_pct}%</b> — ${status}</span>
           </div>
         `;
-      });
+      }
 
       document.getElementById('result').innerHTML = html;
     }
