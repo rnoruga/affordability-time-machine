@@ -1,26 +1,46 @@
 [
-  {"occupation_id": "mailman",    "city": "all", "year": 1960, "salary": 4800,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "mailman",    "city": "all", "year": 1980, "salary": 18000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "mailman",    "city": "all", "year": 2000, "salary": 36000,  "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "mailman",    "city": "all", "year": 2020, "salary": 58000,  "source": "BLS OES 2020",    "confidence": "high"},
+  {"occupation_id": "cashier",     "city": "all", "year": 1960, "salary": 2800,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "cashier",     "city": "all", "year": 1980, "salary": 10500,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "cashier",     "city": "all", "year": 2000, "salary": 18000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "cashier",     "city": "all", "year": 2020, "salary": 27000,  "source": "BLS OES 2020",    "confidence": "high"},
 
-  {"occupation_id": "teacher",    "city": "all", "year": 1960, "salary": 5200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "teacher",    "city": "all", "year": 1980, "salary": 19000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "teacher",    "city": "all", "year": 2000, "salary": 44000,  "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "teacher",    "city": "all", "year": 2020, "salary": 75000,  "source": "BLS OES 2020",    "confidence": "high"},
+  {"occupation_id": "janitor",     "city": "all", "year": 1960, "salary": 3000,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "janitor",     "city": "all", "year": 1980, "salary": 11500,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "janitor",     "city": "all", "year": 2000, "salary": 20000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "janitor",     "city": "all", "year": 2020, "salary": 31000,  "source": "BLS OES 2020",    "confidence": "high"},
 
-  {"occupation_id": "nurse",      "city": "all", "year": 1960, "salary": 4200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "nurse",      "city": "all", "year": 1980, "salary": 17000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "nurse",      "city": "all", "year": 2000, "salary": 48000,  "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "nurse",      "city": "all", "year": 2020, "salary": 98000,  "source": "BLS OES 2020",    "confidence": "high"},
+  {"occupation_id": "bus_driver",  "city": "all", "year": 1960, "salary": 4200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "bus_driver",  "city": "all", "year": 1980, "salary": 16000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "bus_driver",  "city": "all", "year": 2000, "salary": 32000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "bus_driver",  "city": "all", "year": 2020, "salary": 48000,  "source": "BLS OES 2020",    "confidence": "high"},
 
-  {"occupation_id": "programmer", "city": "all", "year": 1960, "salary": 6800,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "programmer", "city": "all", "year": 1980, "salary": 25000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "programmer", "city": "all", "year": 2000, "salary": 72000,  "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "programmer", "city": "all", "year": 2020, "salary": 130000, "source": "BLS OES 2020",    "confidence": "high"},
+  {"occupation_id": "electrician", "city": "all", "year": 1960, "salary": 5500,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "electrician", "city": "all", "year": 1980, "salary": 21000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "electrician", "city": "all", "year": 2000, "salary": 45000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "electrician", "city": "all", "year": 2020, "salary": 73000,  "source": "BLS OES 2020",    "confidence": "high"},
 
-  {"occupation_id": "cook",       "city": "all", "year": 1960, "salary": 3200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "cook",       "city": "all", "year": 1980, "salary": 12000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "cook",       "city": "all", "year": 2000, "salary": 22000,  "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "cook",       "city": "all", "year": 2020, "salary": 35000,  "source": "BLS OES 2020",    "confidence": "high"}
+  {"occupation_id": "teacher",     "city": "all", "year": 1960, "salary": 5200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "teacher",     "city": "all", "year": 1980, "salary": 19000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "teacher",     "city": "all", "year": 2000, "salary": 44000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "teacher",     "city": "all", "year": 2020, "salary": 75000,  "source": "BLS OES 2020",    "confidence": "high"},
+
+  {"occupation_id": "nurse",       "city": "all", "year": 1960, "salary": 4200,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "nurse",       "city": "all", "year": 1980, "salary": 17000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "nurse",       "city": "all", "year": 2000, "salary": 48000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "nurse",       "city": "all", "year": 2020, "salary": 98000,  "source": "BLS OES 2020",    "confidence": "high"},
+
+  {"occupation_id": "developer",   "city": "all", "year": 1960, "salary": 6800,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "developer",   "city": "all", "year": 1980, "salary": 25000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "developer",   "city": "all", "year": 2000, "salary": 72000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "developer",   "city": "all", "year": 2020, "salary": 130000, "source": "BLS OES 2020",    "confidence": "high"},
+
+  {"occupation_id": "lawyer",      "city": "all", "year": 1960, "salary": 11000,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "lawyer",      "city": "all", "year": 1980, "salary": 32000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "lawyer",      "city": "all", "year": 2000, "salary": 95000,  "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "lawyer",      "city": "all", "year": 2020, "salary": 148000, "source": "BLS OES 2020",    "confidence": "high"},
+
+  {"occupation_id": "dentist",     "city": "all", "year": 1960, "salary": 13000,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
+  {"occupation_id": "dentist",     "city": "all", "year": 1980, "salary": 38000,  "source": "BLS 1980",        "confidence": "reconstructed"},
+  {"occupation_id": "dentist",     "city": "all", "year": 2000, "salary": 120000, "source": "BLS OES 2000",    "confidence": "high"},
+  {"occupation_id": "dentist",     "city": "all", "year": 2020, "salary": 180000, "source": "BLS OES 2020",    "confidence": "high"}
 ]

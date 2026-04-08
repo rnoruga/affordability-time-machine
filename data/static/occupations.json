@@ -1,32 +1,65 @@
 [
   {
-    "id": "mailman",
-    "label": "Mail Carrier",
-    "model": "mailman.glb",
-    "description": "A classic middle-class occupation, present across all decades"
+    "id": "cashier",
+    "label": "Cashier",
+    "tier": "low",
+    "income_position": 15,
+    "description": "Retail cashier — entry-level service work, present across all decades"
+  },
+  {
+    "id": "janitor",
+    "label": "Janitor",
+    "tier": "low",
+    "income_position": 25,
+    "description": "Building and grounds cleaning — steady but low-wage work"
+  },
+  {
+    "id": "bus_driver",
+    "label": "Bus Driver",
+    "tier": "low",
+    "income_position": 35,
+    "description": "Public transit operator — unionized in many cities, modest stability"
+  },
+  {
+    "id": "electrician",
+    "label": "Electrician",
+    "tier": "middle",
+    "income_position": 50,
+    "description": "Skilled trade — consistently above median, especially in union markets"
   },
   {
     "id": "teacher",
     "label": "School Teacher",
-    "model": "teacher.glb",
+    "tier": "middle",
+    "income_position": 58,
     "description": "Universal symbol of the middle class"
   },
   {
     "id": "nurse",
-    "label": "Nurse",
-    "model": "nurse.glb",
-    "description": "Growing profession with consistent demand"
+    "label": "Registered Nurse",
+    "tier": "middle",
+    "income_position": 68,
+    "description": "Growing profession with consistent demand across all eras"
   },
   {
-    "id": "programmer",
+    "id": "developer",
     "label": "Software Developer",
-    "model": "programmer.glb",
-    "description": "Counter-example: who actually won in the modern economy"
+    "tier": "high",
+    "income_position": 82,
+    "description": "The winner of the modern economy — especially post-2000"
   },
   {
-    "id": "cook",
-    "label": "Cook / Chef",
-    "model": "cook.glb",
-    "description": "Service industry, lower income bracket"
+    "id": "lawyer",
+    "label": "Lawyer",
+    "tier": "high",
+    "income_position": 90,
+    "description": "High earning potential, but wide variance by specialization"
+  },
+  {
+    "id": "dentist",
+    "label": "Dentist",
+    "tier": "high",
+    "income_position": 96,
+    "description": "Top of the income scale — stable demand, high barrier to entry"
   }
 ]
