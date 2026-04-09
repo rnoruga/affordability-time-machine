@@ -17,6 +17,7 @@ export default function ExploreSection({ era, occupationId, dualIncome, onOccupa
       {/* Left half — profile selector */}
       <div className="flex-1 min-w-0 h-full">
         <ProfilePanel
+          era={era}
           occupationId={occupationId}
           dualIncome={dualIncome}
           onOccupationChange={onOccupationChange}

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Switch } from '@/components/ui/switch'
 import { cn } from '@/lib/utils'
 import occupations from '@/data/occupations.json'
+import narratives from '@/data/narratives.json'
 import profilePlaceholder from '@/assets/profile-placeholder.png'
 
 // Scale geometry — container spans exactly tick min→max
@@ -28,10 +29,13 @@ function tickLeft(pos) {
   return tickX(pos) - 1
 }
 
-export default function ProfilePanel({ occupationId, dualIncome, onOccupationChange, onDualIncomeChange }) {
+export default function ProfilePanel({ era, occupationId, dualIncome, onOccupationChange, onDualIncomeChange }) {
   const carouselRef = useRef(null)
   const currentIndex = occupations.findIndex((o) => o.id === occupationId)
   const current = occupations[currentIndex]
+  const year = era ? era.replace('s', '') : null
+  const narrativeKey = year ? `${occupationId}_${year}_${dualIncome ? 'dual' : 'single'}` : null
+  const narrative = (narrativeKey && narratives[narrativeKey]) || ''
   const scrollLocked = useRef(false)
   const unlockTimer = useRef(null)
   const currentIndexRef = useRef(currentIndex)
@@ -106,8 +110,7 @@ export default function ProfilePanel({ occupationId, dualIncome, onOccupationCha
             {current.label}
           </p>
           <p className="text-sm text-muted-foreground w-full">
-            Here should be a descriptor placeholder to explain the result of
-            selection in a nutshell. Will be done in a later iteration.
+            {narrative}
           </p>
         </div>
       </div>
