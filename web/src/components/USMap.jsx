@@ -169,9 +169,9 @@ function Tooltip({ tooltip, homeType }) {
             <Row label="Median home" value={fmt$(market.median_home_price)} />
           )}
 
-          <Row label="Median income" value={fmt$(market.median_household_income)} />
+          <Row label="Annual income" value={home ? fmt$(profile.effective_income) : fmt$(market.median_household_income)} />
           <Row label="Mortgage rate" value={`${market.mortgage_rate}%`} />
-          <Row label="Price / income" value={`${market.price_to_income}×`} />
+          <Row label="Price / income" value={home ? `${home.price_to_income}×` : `${market.price_to_income}×`} />
 
           {home && (
             <>
