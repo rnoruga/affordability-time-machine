@@ -1,4 +1,5 @@
 import ProfilePanel from '@/components/ProfilePanel'
+import USMap from '@/components/USMap'
 
 export default function ExploreSection({ era, occupationId, dualIncome, onOccupationChange, onDualIncomeChange }) {
   if (!era) {
@@ -23,11 +24,13 @@ export default function ExploreSection({ era, occupationId, dualIncome, onOccupa
         />
       </div>
 
-      {/* Right half — map placeholder */}
-      <div className="flex-1 min-w-0 h-full bg-accent flex items-center justify-center overflow-hidden">
-        <p className="text-sm text-muted-foreground text-center">
-          Here should be a map in a next iteration.
-        </p>
+      {/* Right half — US map */}
+      <div className="flex-1 min-w-0 h-full">
+        <USMap
+          era={era}
+          occupationId={occupationId}
+          dualIncome={dualIncome}
+        />
       </div>
     </div>
   )
