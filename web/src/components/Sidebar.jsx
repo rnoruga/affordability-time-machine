@@ -9,9 +9,9 @@ function IconPlaceholder() {
 
 export default function Sidebar({ section, era, onSectionChange, onEraChange }) {
   return (
-    <aside className="w-[120px] shrink-0 flex flex-col justify-between pl-5 pt-12 pb-12 pr-4 h-screen bg-stone-800">
+    <aside className="w-[86px] shrink-0 flex flex-col justify-between pt-12 pb-12 pr-4 h-screen bg-stone-800">
       {/* Top nav — fully rounded icon buttons */}
-      <div className="flex flex-col items-start gap-1 w-full">
+      <div className="flex flex-col items-start gap-1 w-full pl-5">
         {[
           { id: 'about',   label: 'About'   },
           { id: 'explore', label: 'Explore' },
@@ -32,28 +32,34 @@ export default function Sidebar({ section, era, onSectionChange, onEraChange }) 
         ))}
       </div>
 
-      {/* Era button group — visible only in Explore */}
-      <div className={cn('flex flex-col w-full', section !== 'explore' && 'invisible')}>
-        {ERAS.map((e, i) => (
+      {/* Era scale — tick marks from left edge, visible only in Explore */}
+      <div className={cn('flex flex-col gap-3 w-full', section !== 'explore' && 'invisible')}>
+        {ERAS.map((e) => (
           <button
             key={e}
             onClick={() => onEraChange(e)}
-            className={cn(
-              'w-full h-8 flex items-center justify-center text-sm font-medium border px-2.5',
-              i === 0 && 'rounded-t-[10px]',
-              i === ERAS.length - 1 ? 'rounded-b-[10px]' : 'border-b-0',
-              era === e
-                ? 'bg-stone-50 text-stone-900 border-stone-50'
-                : 'bg-transparent text-stone-400 border-stone-600 hover:text-stone-50'
-            )}
+            className="relative flex items-center pl-6 group"
           >
-            {e}
+            <div className={cn(
+              'absolute left-0 h-px',
+              era === e
+                ? 'w-4 bg-red-500'
+                : 'w-3 bg-stone-500 group-hover:bg-stone-400'
+            )} />
+            <span className={cn(
+              'text-sm leading-normal',
+              era === e
+                ? 'text-stone-50'
+                : 'text-stone-400 group-hover:text-stone-300'
+            )}>
+              {e}
+            </span>
           </button>
         ))}
       </div>
 
       {/* Invisible spacer — mirrors nav height for balance */}
-      <div className="flex flex-col gap-1 w-full opacity-0 pointer-events-none" aria-hidden>
+      <div className="flex flex-col gap-1 w-full pl-5 opacity-0 pointer-events-none" aria-hidden>
         <div className="h-10 w-10" />
         <div className="h-10 w-10" />
       </div>
