@@ -109,7 +109,7 @@ export default function ProfilePanel({ era, occupationId, dualIncome, onOccupati
           <p className="text-2xl font-medium text-foreground w-full">
             {current.label}
           </p>
-          <p className="text-sm text-muted-foreground w-full">
+          <p className="text-sm text-muted-foreground w-full min-h-[4.5em]">
             {narrative}
           </p>
         </div>
