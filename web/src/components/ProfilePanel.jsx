@@ -77,9 +77,10 @@ export default function ProfilePanel({ era, occupationId, dualIncome, onOccupati
         <div className="flex items-center gap-2">
           <label
             htmlFor="dual-income"
-            className="text-sm font-medium text-foreground cursor-pointer select-none"
+            className="cursor-pointer select-none"
           >
-            Working spouse
+            <span className="text-sm font-medium text-foreground">+ Partner income</span>
+            <span className="block text-xs text-muted-foreground">(+40% of your salary)</span>
           </label>
           <Switch
             id="dual-income"
