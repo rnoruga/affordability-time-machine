@@ -26,26 +26,28 @@ function App() {
       </div>
 
       {/* Main app — desktop only */}
-      <div className="hidden lg:flex h-screen w-screen overflow-hidden">
+      <div className="hidden lg:flex h-screen w-screen overflow-hidden bg-stone-800">
         <Sidebar
           section={section}
           era={era}
           onSectionChange={handleSectionChange}
           onEraChange={handleEraChange}
         />
-        <main className="flex-1 min-w-0 h-full">
-          {section === 'about' ? (
-            <AboutSection onExplore={() => setSection('explore')} />
-          ) : (
-            <ExploreSection
-              era={era}
-              occupationId={occupationId}
-              dualIncome={dualIncome}
-              onOccupationChange={setOccupationId}
-              onDualIncomeChange={setDualIncome}
-            />
-          )}
-        </main>
+        <div className="flex-1 min-w-0 h-full pt-3 pr-3 pb-3">
+          <main className="w-full h-full bg-stone-50 overflow-hidden rounded-[32px] shadow-[inset_0_0_0_3px_rgba(41,37,36,0.3)]">
+            {section === 'about' ? (
+              <AboutSection onExplore={() => setSection('explore')} />
+            ) : (
+              <ExploreSection
+                era={era}
+                occupationId={occupationId}
+                dualIncome={dualIncome}
+                onOccupationChange={setOccupationId}
+                onDualIncomeChange={setDualIncome}
+              />
+            )}
+          </main>
+        </div>
       </div>
     </>
   )

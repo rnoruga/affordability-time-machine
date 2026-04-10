@@ -26,12 +26,14 @@ export default function ExploreSection({ era, occupationId, dualIncome, onOccupa
       </div>
 
       {/* Right half — US map */}
-      <div className="flex-1 min-w-0 h-full">
-        <USMap
-          era={era}
-          occupationId={occupationId}
-          dualIncome={dualIncome}
-        />
+      <div className="flex-1 min-w-0 h-full pt-2 pr-2 pb-2">
+        <div className="w-full h-full rounded-[24px] overflow-hidden">
+          <USMap
+            era={era}
+            occupationId={occupationId}
+            dualIncome={dualIncome}
+          />
+        </div>
       </div>
     </div>
   )
