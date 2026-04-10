@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Switch } from '@/components/ui/switch'
 import { cn } from '@/lib/utils'
 import occupations from '@/data/occupations.json'
 import narratives from '@/data/narratives.json'
@@ -72,22 +71,18 @@ export default function ProfilePanel({ era, occupationId, dualIncome, onOccupati
 
   return (
     <div className="flex flex-col items-center justify-between h-full pb-4 pt-1.5 px-8 min-w-0">
-      {/* Switch — top */}
+      {/* Partner toggle button — top */}
       <div className="pt-12 w-full flex items-center justify-center">
-        <div className="flex items-center gap-2">
-          <label
-            htmlFor="dual-income"
-            className="cursor-pointer select-none"
-          >
-            <span className="text-sm font-medium text-foreground">+ Partner income</span>
-            <span className="block text-xs text-muted-foreground">(+40% of your salary)</span>
-          </label>
-          <Switch
-            id="dual-income"
-            checked={dualIncome}
-            onCheckedChange={onDualIncomeChange}
-          />
-        </div>
+        <button
+          onClick={() => onDualIncomeChange(!dualIncome)}
+          className={cn(
+            'px-4 py-2 rounded-full text-sm font-medium select-none transition-colors',
+            dualIncome ? 'bg-stone-800' : 'bg-stone-100 hover:bg-stone-200'
+          )}
+        >
+          <span className={dualIncome ? 'text-stone-50' : 'text-stone-800'}>Two incomes </span>
+          <span className="text-teal-600">+40%</span>
+        </button>
       </div>
 
       {/* Profile carousel — center */}
