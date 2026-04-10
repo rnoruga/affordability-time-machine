@@ -6,8 +6,8 @@ export default function AboutSection({ onExplore }) {
   return (
     <div className="flex h-full overflow-hidden">
       {/* Left — narrative */}
-      <div className="flex items-center justify-center pl-16 pr-12 shrink-0 w-[576px]">
-      <div className="flex flex-col gap-6 items-start w-full">
+      <div className="flex items-center justify-center pl-16 pr-12 w-3/4">
+      <div className="flex flex-col gap-6 items-start w-full max-w-lg">
         {/* Headline */}
         <h1 className="text-2xl font-semibold leading-8 text-foreground">
           <span>"Just cut the </span>
@@ -37,14 +37,14 @@ export default function AboutSection({ onExplore }) {
           </p>
         </div>
 
-        <Button variant="secondary" size="default" onClick={onExplore}>
+        <Button variant="default" size="default" onClick={onExplore}>
           Explore affordability
         </Button>
       </div>
       </div>
 
       {/* Right — video carousel */}
-      <div className="flex-1 min-w-0 h-full">
+      <div className="w-1/4 h-full pr-[60px]">
         <VideoCarousel />
       </div>
     </div>

@@ -1,1 +1,5 @@
 /* App-level styles — layout handled via Tailwind */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
