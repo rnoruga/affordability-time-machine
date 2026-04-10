@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import VideoCarousel from '@/components/VideoCarousel'
 
 export default function AboutSection({ onExplore }) {
   return (
-    <div className="flex h-full items-center justify-center pr-[120px]">
-      <div className="flex flex-col gap-6 items-start max-w-[576px] w-full">
+    <div className="flex h-full overflow-hidden">
+      {/* Left — narrative */}
+      <div className="flex items-center justify-center pl-16 pr-12 shrink-0 w-[576px]">
+      <div className="flex flex-col gap-6 items-start w-full">
         {/* Headline */}
         <h1 className="text-2xl font-semibold leading-8 text-foreground">
           <span>"Just cut the </span>
@@ -37,6 +40,12 @@ export default function AboutSection({ onExplore }) {
         <Button variant="secondary" size="default" onClick={onExplore}>
           Explore affordability
         </Button>
+      </div>
+      </div>
+
+      {/* Right — video carousel */}
+      <div className="flex-1 min-w-0 h-full">
+        <VideoCarousel />
       </div>
     </div>
   )
