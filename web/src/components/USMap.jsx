@@ -74,7 +74,7 @@ export default function USMap({ era, occupationId, dualIncome }) {
       container:        containerRef.current,
       style:            'mapbox://styles/mapbox/light-v11',
       center:           [-98.5795, 39.8283],
-      zoom:             3.5,
+      zoom:             2.8,
       dragPan:          false,
       dragRotate:       false,
       scrollZoom:       false,
@@ -88,13 +88,11 @@ export default function USMap({ era, occupationId, dualIncome }) {
     mapRef.current = map
 
     map.on('load', () => {
-      // Hide non-US country/place labels
+      // Hide all built-in place, state and country labels — only our custom layer shows
+      const HIDDEN_SOURCE_LAYERS = new Set(['place_label', 'natural_label', 'state_label', 'country_label', 'settlement_label', 'settlement_subdivision_label'])
       map.getStyle().layers.forEach(layer => {
-        if (
-          (layer.type === 'symbol' && layer['source-layer'] === 'place_label') ||
-          (layer.type === 'symbol' && layer['source-layer'] === 'country_label')
-        ) {
-          map.setFilter(layer.id, ['==', ['get', 'iso_3166_1'], 'US'])
+        if (layer.type === 'symbol' && HIDDEN_SOURCE_LAYERS.has(layer['source-layer'])) {
+          map.setLayoutProperty(layer.id, 'visibility', 'none')
         }
       })
 
