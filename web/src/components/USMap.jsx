@@ -20,6 +20,15 @@ const HOME_TYPES = [
   { id: 'median',  label: 'Median home'  },
 ]
 
+// Linear interpolation between two breakpoints, clamped at both ends
+function getZoom() {
+  const w    = window.innerWidth
+  const minW = 1024, maxW = 1920
+  const minZ = 2.2,  maxZ = 3.2
+  const t = Math.max(0, Math.min(1, (w - minW) / (maxW - minW)))
+  return minZ + t * (maxZ - minZ)
+}
+
 function fmt$(n) {
   return n >= 1_000_000
     ? `$${(n / 1_000_000).toFixed(2)}M`
@@ -74,7 +83,7 @@ export default function USMap({ era, occupationId, dualIncome }) {
       container:        containerRef.current,
       style:            'mapbox://styles/mapbox/light-v11',
       center:           [-98.5795, 39.8283],
-      zoom:             2.8,
+      zoom:             getZoom(),
       dragPan:          false,
       dragRotate:       false,
       scrollZoom:       false,
@@ -86,6 +95,8 @@ export default function USMap({ era, occupationId, dualIncome }) {
     })
 
     mapRef.current = map
+
+    map.getCanvas().style.cursor = 'default'
 
     map.on('load', () => {
       // Hide all built-in place, state and country labels — only our custom layer shows
@@ -163,12 +174,20 @@ export default function USMap({ era, occupationId, dualIncome }) {
       })
 
       map.on('mouseleave', 'city-dots', () => {
-        map.getCanvas().style.cursor = ''
+        map.getCanvas().style.cursor = 'default'
         setTooltip(null)
       })
     })
 
-    return () => map.remove()
+    function handleResize() {
+      map.setZoom(getZoom())
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      map.remove()
+    }
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Update dot colors on prop/homeType change ─────────────────────────────

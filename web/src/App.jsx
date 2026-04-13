@@ -58,7 +58,7 @@ function App() {
           onEraChange={handleEraChange}
         />
         <div className="flex-1 min-w-0 h-full pt-3 pr-3 pb-3">
-          <main className="w-full h-full bg-stone-50 overflow-hidden rounded-[32px] shadow-[inset_0_0_0_3px_rgba(41,37,36,0.3)]">
+          <main className="w-full h-full bg-stone-50 overflow-hidden rounded-[32px] shadow-[inset_0_0_0_4px_rgba(41,37,36,0.2)]">
             {section === 'about' ? (
               <AboutSection onExplore={() => setSection('explore')} />
             ) : (

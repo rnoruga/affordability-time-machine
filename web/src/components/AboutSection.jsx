@@ -9,19 +9,14 @@ export default function AboutSection({ onExplore }) {
       <div className="flex items-center justify-center pl-16 pr-12 w-3/4">
       <div className="flex flex-col gap-6 items-start w-full max-w-lg">
         {/* Headline */}
-        <h1 className="text-2xl font-semibold leading-8 text-foreground">
-          <span>"Just cut the </span>
-          <span style={{ color: '#65a30d' }}>avocado</span>
-          <span> toast," </span>
-          <span className="font-normal">they said.</span>
-          <br />
-          "Skip the lattes. Save more. Try harder."
+        <h1 className="text-2xl font-medium leading-8 text-foreground">
+          "Just skip the lattes" they said
         </h1>
 
         <Separator />
 
         {/* Body */}
-        <div className="flex flex-col gap-5 text-base font-medium text-muted-foreground w-full">
+        <div className="flex flex-col gap-5 text-base font-normal text-foreground w-full">
           <p>
             In 1960, a mail carrier in Los Angeles could buy a home on 4 years of
             salary. Today, the same job requires 40. No lattes were harmed in the
