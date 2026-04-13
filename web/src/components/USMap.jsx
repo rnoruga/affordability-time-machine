@@ -123,7 +123,7 @@ export default function USMap({ era, occupationId, dualIncome }) {
           'text-size':   12,
           'text-offset': [0, 1.5],
           'text-anchor': 'top',
-          'text-font':   ['DIN Pro Regular', 'Arial Unicode MS Regular'],
+          'text-font':   ['Inter Medium', 'Arial Unicode MS Regular'],
         },
         paint: {
           'text-color':      '#1c1917',
