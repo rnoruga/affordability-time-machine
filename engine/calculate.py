@@ -3,6 +3,20 @@ import os
 
 STARTER_HOME_RATIO = 0.82  # NAR entry-level coefficient, fixed ratio — see docs
 
+# City income coefficients for 1960 and 1980:
+# city median household income / national median household income
+# National medians: 1960 = $5,600 | 1980 = $17,700  (Census historical)
+CITY_INCOME_COEFFICIENTS = {
+    "Los Angeles":   {1960: 1.18, 1980: 1.30},
+    "New York":      {1960: 1.09, 1980: 1.19},
+    "San Francisco": {1960: 1.29, 1980: 1.41},
+    "Chicago":       {1960: 1.21, 1980: 1.36},
+    "Seattle":       {1960: 1.16, 1980: 1.38},
+    "Miami":         {1960: 0.98, 1980: 1.07},
+    "Houston":       {1960: 1.04, 1980: 1.27},
+    "Phoenix":       {1960: 1.07, 1980: 1.19},
+}
+
 
 def load_json(relative_path):
     path = os.path.join(os.path.dirname(__file__), relative_path)
@@ -42,19 +56,38 @@ def calculate_profiles(price, rate, salaries, city, year, median_income):
     results = []
 
     for occ in occupations:
+        # 1. City-specific entry
         salary_entry = next(
             (s for s in salaries
              if s["occupation_id"] == occ["id"]
              and s["city"] == city
              and s["year"] == year),
             None
-        ) or next(
-            (s for s in salaries
-             if s["occupation_id"] == occ["id"]
-             and s["city"] == "all"
-             and s["year"] == year),
-            None
         )
+
+        # 2. Coefficient-scaled national baseline for 1960 and 1980
+        if salary_entry is None and year in (1960, 1980) and city in CITY_INCOME_COEFFICIENTS:
+            national = next(
+                (s for s in salaries
+                 if s["occupation_id"] == occ["id"]
+                 and s["city"] == "all"
+                 and s["year"] == year),
+                None
+            )
+            if national:
+                coeff = CITY_INCOME_COEFFICIENTS[city][year]
+                scaled = round(national["salary"] * coeff / 100) * 100
+                salary_entry = {**national, "salary": scaled, "confidence": "reconstructed"}
+
+        # 3. National baseline fallback
+        if salary_entry is None:
+            salary_entry = next(
+                (s for s in salaries
+                 if s["occupation_id"] == occ["id"]
+                 and s["city"] == "all"
+                 and s["year"] == year),
+                None
+            )
 
         if not salary_entry:
             continue

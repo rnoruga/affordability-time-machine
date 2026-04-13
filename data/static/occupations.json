@@ -24,14 +24,14 @@
     "id": "electrician",
     "label": "Electrician",
     "tier": "middle",
-    "income_position": 50,
+    "income_position": 58,
     "description": "Skilled trade — consistently above median, especially in union markets"
   },
   {
     "id": "teacher",
     "label": "School Teacher",
     "tier": "middle",
-    "income_position": 58,
+    "income_position": 50,
     "description": "Universal symbol of the middle class"
   },
   {
