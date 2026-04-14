@@ -10,7 +10,7 @@ const TICK_MAX = 105
 const TICK_RANGE = TICK_MAX - TICK_MIN
 const SCALE_W = 228 // total px width
 
-const TICK_OVERRIDES = { dentist: 100 }
+const TICK_OVERRIDES = {}
 
 function tickX(pos) {
   return ((pos - TICK_MIN) / TICK_RANGE) * SCALE_W

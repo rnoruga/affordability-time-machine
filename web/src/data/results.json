@@ -331,46 +331,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 15300,
-        "effective_income": 15300.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 16700,
-          "price_to_income": 1.09,
-          "monthly_payment": 73.0,
-          "burden_pct": 5.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 15300,
-        "effective_income": 21420.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 16700,
-          "price_to_income": 0.78,
-          "monthly_payment": 73.0,
-          "burden_pct": 4.1,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -703,46 +663,6 @@
           "price_to_income": 1.61,
           "monthly_payment": 873.0,
           "burden_pct": 18.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 49400,
-        "effective_income": 49400.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 94000,
-          "price_to_income": 1.9,
-          "monthly_payment": 873.0,
-          "burden_pct": 21.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 49400,
-        "effective_income": 69160.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 94000,
-          "price_to_income": 1.36,
-          "monthly_payment": 873.0,
-          "burden_pct": 15.2,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -1081,46 +1001,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 135000,
-        "effective_income": 135000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.2,
-        "median_home": {
-          "price": 209300,
-          "price_to_income": 1.55,
-          "monthly_payment": 1240.0,
-          "burden_pct": 11.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 135000,
-        "effective_income": 189000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.2,
-        "median_home": {
-          "price": 209300,
-          "price_to_income": 1.11,
-          "monthly_payment": 1240.0,
-          "burden_pct": 7.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -1453,46 +1333,6 @@
           "price_to_income": 2.62,
           "monthly_payment": 2103.0,
           "burden_pct": 10.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 198000,
-        "effective_income": 198000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.77,
-        "median_home": {
-          "price": 615500,
-          "price_to_income": 3.11,
-          "monthly_payment": 2103.0,
-          "burden_pct": 12.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 198000,
-        "effective_income": 277200.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.77,
-        "median_home": {
-          "price": 615500,
-          "price_to_income": 2.22,
-          "monthly_payment": 2103.0,
-          "burden_pct": 9.1,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -1831,46 +1671,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 14200,
-        "effective_income": 14200.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 15800,
-          "price_to_income": 1.11,
-          "monthly_payment": 69.0,
-          "burden_pct": 5.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 14200,
-        "effective_income": 19880.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 15800,
-          "price_to_income": 0.79,
-          "monthly_payment": 69.0,
-          "burden_pct": 4.1,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -2203,46 +2003,6 @@
           "price_to_income": 1.46,
           "monthly_payment": 725.0,
           "burden_pct": 16.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 45200,
-        "effective_income": 45200.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 78000,
-          "price_to_income": 1.73,
-          "monthly_payment": 725.0,
-          "burden_pct": 19.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 45200,
-        "effective_income": 63280.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 78000,
-          "price_to_income": 1.23,
-          "monthly_payment": 725.0,
-          "burden_pct": 13.7,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -2581,46 +2341,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 142000,
-        "effective_income": 142000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 4.42,
-        "median_home": {
-          "price": 224100,
-          "price_to_income": 1.58,
-          "monthly_payment": 1328.0,
-          "burden_pct": 11.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 142000,
-        "effective_income": 198800.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 4.42,
-        "median_home": {
-          "price": 224100,
-          "price_to_income": 1.13,
-          "monthly_payment": 1328.0,
-          "burden_pct": 8.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -2953,46 +2673,6 @@
           "price_to_income": 2.65,
           "monthly_payment": 2510.0,
           "burden_pct": 10.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 210000,
-        "effective_income": 210000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.28,
-        "median_home": {
-          "price": 734800,
-          "price_to_income": 3.5,
-          "monthly_payment": 2510.0,
-          "burden_pct": 14.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 210000,
-        "effective_income": 294000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.28,
-        "median_home": {
-          "price": 734800,
-          "price_to_income": 2.5,
-          "monthly_payment": 2510.0,
-          "burden_pct": 10.2,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -3331,46 +3011,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 15700,
-        "effective_income": 15700.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.31,
-        "median_home": {
-          "price": 13800,
-          "price_to_income": 0.88,
-          "monthly_payment": 60.0,
-          "burden_pct": 4.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 15700,
-        "effective_income": 21980.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.31,
-        "median_home": {
-          "price": 13800,
-          "price_to_income": 0.63,
-          "monthly_payment": 60.0,
-          "burden_pct": 3.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -3703,46 +3343,6 @@
           "price_to_income": 1.18,
           "monthly_payment": 669.0,
           "burden_pct": 13.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 51700,
-        "effective_income": 51700.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 72000,
-          "price_to_income": 1.39,
-          "monthly_payment": 669.0,
-          "burden_pct": 15.5,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 51700,
-        "effective_income": 72380.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 72000,
-          "price_to_income": 0.99,
-          "monthly_payment": 669.0,
-          "burden_pct": 11.1,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -4081,46 +3681,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 128000,
-        "effective_income": 128000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.79,
-        "median_home": {
-          "price": 157700,
-          "price_to_income": 1.23,
-          "monthly_payment": 935.0,
-          "burden_pct": 8.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 128000,
-        "effective_income": 179200.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.79,
-        "median_home": {
-          "price": 157700,
-          "price_to_income": 0.88,
-          "monthly_payment": 935.0,
-          "burden_pct": 6.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -4453,46 +4013,6 @@
           "price_to_income": 1.18,
           "monthly_payment": 873.0,
           "burden_pct": 4.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 185000,
-        "effective_income": 185000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.73,
-        "median_home": {
-          "price": 255500,
-          "price_to_income": 1.38,
-          "monthly_payment": 873.0,
-          "burden_pct": 5.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 185000,
-        "effective_income": 259000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.73,
-        "median_home": {
-          "price": 255500,
-          "price_to_income": 0.99,
-          "monthly_payment": 873.0,
-          "burden_pct": 4.0,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -4831,46 +4351,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 13500,
-        "effective_income": 13500.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 10200,
-          "price_to_income": 0.76,
-          "monthly_payment": 44.0,
-          "burden_pct": 3.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 13500,
-        "effective_income": 18900.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 10200,
-          "price_to_income": 0.54,
-          "monthly_payment": 44.0,
-          "burden_pct": 2.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -5203,46 +4683,6 @@
           "price_to_income": 1.13,
           "monthly_payment": 595.0,
           "burden_pct": 12.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 48300,
-        "effective_income": 48300.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 64000,
-          "price_to_income": 1.33,
-          "monthly_payment": 595.0,
-          "burden_pct": 14.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 48300,
-        "effective_income": 67620.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 64000,
-          "price_to_income": 0.95,
-          "monthly_payment": 595.0,
-          "burden_pct": 10.6,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -5581,46 +5021,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 115000,
-        "effective_income": 115000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.7,
-        "median_home": {
-          "price": 87000,
-          "price_to_income": 0.76,
-          "monthly_payment": 516.0,
-          "burden_pct": 5.4,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 115000,
-        "effective_income": 161000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.7,
-        "median_home": {
-          "price": 87000,
-          "price_to_income": 0.54,
-          "monthly_payment": 516.0,
-          "burden_pct": 3.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -5953,46 +5353,6 @@
           "price_to_income": 0.95,
           "monthly_payment": 647.0,
           "burden_pct": 3.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 168000,
-        "effective_income": 168000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.67,
-        "median_home": {
-          "price": 189400,
-          "price_to_income": 1.13,
-          "monthly_payment": 647.0,
-          "burden_pct": 4.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 168000,
-        "effective_income": 235200.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.67,
-        "median_home": {
-          "price": 189400,
-          "price_to_income": 0.81,
-          "monthly_payment": 647.0,
-          "burden_pct": 3.3,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -6331,46 +5691,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 16800,
-        "effective_income": 16800.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 21000,
-          "price_to_income": 1.25,
-          "monthly_payment": 91.0,
-          "burden_pct": 6.5,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 16800,
-        "effective_income": 23520.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.33,
-        "median_home": {
-          "price": 21000,
-          "price_to_income": 0.89,
-          "monthly_payment": 91.0,
-          "burden_pct": 4.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -6703,46 +6023,6 @@
           "price_to_income": 1.77,
           "monthly_payment": 1040.0,
           "burden_pct": 19.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 53600,
-        "effective_income": 53600.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 112000,
-          "price_to_income": 2.09,
-          "monthly_payment": 1040.0,
-          "burden_pct": 23.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 53600,
-        "effective_income": 75040.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 112000,
-          "price_to_income": 1.49,
-          "monthly_payment": 1040.0,
-          "burden_pct": 16.6,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -7081,46 +6361,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 148000,
-        "effective_income": 148000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.68,
-        "median_home": {
-          "price": 396400,
-          "price_to_income": 2.68,
-          "monthly_payment": 2349.0,
-          "burden_pct": 19.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 148000,
-        "effective_income": 207200.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.68,
-        "median_home": {
-          "price": 396400,
-          "price_to_income": 1.91,
-          "monthly_payment": 2349.0,
-          "burden_pct": 13.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -7453,46 +6693,6 @@
           "price_to_income": 4.29,
           "monthly_payment": 3936.0,
           "burden_pct": 17.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 225000,
-        "effective_income": 225000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 1.89,
-        "median_home": {
-          "price": 1152300,
-          "price_to_income": 5.12,
-          "monthly_payment": 3936.0,
-          "burden_pct": 21.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 225000,
-        "effective_income": 315000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 1.89,
-        "median_home": {
-          "price": 1152300,
-          "price_to_income": 3.66,
-          "monthly_payment": 3936.0,
-          "burden_pct": 15.0,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -7831,46 +7031,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 15100,
-        "effective_income": 15100.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 14500,
-          "price_to_income": 0.96,
-          "monthly_payment": 63.0,
-          "burden_pct": 5.0,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 15100,
-        "effective_income": 21140.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 14500,
-          "price_to_income": 0.69,
-          "monthly_payment": 63.0,
-          "burden_pct": 3.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -8203,46 +7363,6 @@
           "price_to_income": 1.23,
           "monthly_payment": 706.0,
           "burden_pct": 13.7,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 52400,
-        "effective_income": 52400.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 76000,
-          "price_to_income": 1.45,
-          "monthly_payment": 706.0,
-          "burden_pct": 16.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 52400,
-        "effective_income": 73360.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 76000,
-          "price_to_income": 1.04,
-          "monthly_payment": 706.0,
-          "burden_pct": 11.5,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -8581,46 +7701,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 132000,
-        "effective_income": 132000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.48,
-        "median_home": {
-          "price": 236900,
-          "price_to_income": 1.79,
-          "monthly_payment": 1404.0,
-          "burden_pct": 12.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 132000,
-        "effective_income": 184800.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.48,
-        "median_home": {
-          "price": 236900,
-          "price_to_income": 1.28,
-          "monthly_payment": 1404.0,
-          "burden_pct": 9.1,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -8953,46 +8033,6 @@
           "price_to_income": 2.65,
           "monthly_payment": 2053.0,
           "burden_pct": 10.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 195000,
-        "effective_income": 195000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 1.97,
-        "median_home": {
-          "price": 601100,
-          "price_to_income": 3.08,
-          "monthly_payment": 2053.0,
-          "burden_pct": 12.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 195000,
-        "effective_income": 273000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 1.97,
-        "median_home": {
-          "price": 601100,
-          "price_to_income": 2.2,
-          "monthly_payment": 2053.0,
-          "burden_pct": 9.0,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -9331,46 +8371,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 12700,
-        "effective_income": 12700.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.31,
-        "median_home": {
-          "price": 12000,
-          "price_to_income": 0.94,
-          "monthly_payment": 52.0,
-          "burden_pct": 4.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 12700,
-        "effective_income": 17780.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.31,
-        "median_home": {
-          "price": 12000,
-          "price_to_income": 0.67,
-          "monthly_payment": 52.0,
-          "burden_pct": 3.5,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -9703,46 +8703,6 @@
           "price_to_income": 1.42,
           "monthly_payment": 632.0,
           "burden_pct": 15.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 40700,
-        "effective_income": 40700.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 68000,
-          "price_to_income": 1.67,
-          "monthly_payment": 632.0,
-          "burden_pct": 18.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 40700,
-        "effective_income": 56980.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.14,
-        "median_home": {
-          "price": 68000,
-          "price_to_income": 1.19,
-          "monthly_payment": 632.0,
-          "burden_pct": 13.3,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -10081,46 +9041,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 118000,
-        "effective_income": 118000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.28,
-        "median_home": {
-          "price": 124000,
-          "price_to_income": 1.05,
-          "monthly_payment": 735.0,
-          "burden_pct": 7.5,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 118000,
-        "effective_income": 165200.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.28,
-        "median_home": {
-          "price": 124000,
-          "price_to_income": 0.75,
-          "monthly_payment": 735.0,
-          "burden_pct": 5.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -10453,46 +9373,6 @@
           "price_to_income": 1.61,
           "monthly_payment": 1061.0,
           "burden_pct": 6.6,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 172000,
-        "effective_income": 172000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.19,
-        "median_home": {
-          "price": 310700,
-          "price_to_income": 1.81,
-          "monthly_payment": 1061.0,
-          "burden_pct": 7.4,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 172000,
-        "effective_income": 240800.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 3.19,
-        "median_home": {
-          "price": 310700,
-          "price_to_income": 1.29,
-          "monthly_payment": 1061.0,
-          "burden_pct": 5.3,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -10831,46 +9711,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 13900,
-        "effective_income": 13900.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 11500,
-          "price_to_income": 0.83,
-          "monthly_payment": 50.0,
-          "burden_pct": 4.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 13900,
-        "effective_income": 19460.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.32,
-        "median_home": {
-          "price": 11500,
-          "price_to_income": 0.59,
-          "monthly_payment": 50.0,
-          "burden_pct": 3.1,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -11203,46 +10043,6 @@
           "price_to_income": 1.24,
           "monthly_payment": 613.0,
           "burden_pct": 13.8,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 45200,
-        "effective_income": 45200.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 66000,
-          "price_to_income": 1.46,
-          "monthly_payment": 613.0,
-          "burden_pct": 16.3,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 45200,
-        "effective_income": 63280.0,
-        "salary_confidence": "reconstructed",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.15,
-        "median_home": {
-          "price": 66000,
-          "price_to_income": 1.04,
-          "monthly_payment": 613.0,
-          "burden_pct": 11.6,
           "affordability_status": "comfortable"
         },
         "context_flags": []
@@ -11581,46 +10381,6 @@
           "affordability_status": "comfortable"
         },
         "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 112000,
-        "effective_income": 112000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.47,
-        "median_home": {
-          "price": 129200,
-          "price_to_income": 1.15,
-          "monthly_payment": 766.0,
-          "burden_pct": 8.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 112000,
-        "effective_income": 156800.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.47,
-        "median_home": {
-          "price": 129200,
-          "price_to_income": 0.82,
-          "monthly_payment": 766.0,
-          "burden_pct": 5.9,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
       }
     ]
   },
@@ -11953,46 +10713,6 @@
           "price_to_income": 1.51,
           "monthly_payment": 952.0,
           "burden_pct": 6.2,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": []
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "single",
-        "household_label": "Single income",
-        "base_salary": 162000,
-        "effective_income": 162000.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.39,
-        "median_home": {
-          "price": 278700,
-          "price_to_income": 1.72,
-          "monthly_payment": 952.0,
-          "burden_pct": 7.1,
-          "affordability_status": "comfortable"
-        },
-        "context_flags": [
-          "one_income"
-        ]
-      },
-      {
-        "occupation_id": "dentist",
-        "occupation_label": "Dentist",
-        "household_id": "dual",
-        "household_label": "Dual income",
-        "base_salary": 162000,
-        "effective_income": 226800.0,
-        "salary_confidence": "high",
-        "income_tier": "upper_middle",
-        "relative_to_median": 2.39,
-        "median_home": {
-          "price": 278700,
-          "price_to_income": 1.23,
-          "monthly_payment": 952.0,
-          "burden_pct": 5.0,
           "affordability_status": "comfortable"
         },
         "context_flags": []

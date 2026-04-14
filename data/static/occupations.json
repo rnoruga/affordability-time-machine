@@ -54,12 +54,5 @@
     "tier": "high",
     "income_position": 90,
     "description": "High earning potential, but wide variance by specialization"
-  },
-  {
-    "id": "dentist",
-    "label": "Dentist",
-    "tier": "high",
-    "income_position": 96,
-    "description": "Top of the income scale — stable demand, high barrier to entry"
   }
 ]

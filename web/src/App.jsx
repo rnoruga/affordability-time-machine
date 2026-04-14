@@ -4,7 +4,7 @@ import AboutSection from '@/components/AboutSection'
 import ExploreSection from '@/components/ExploreSection'
 
 const VALID_ERAS         = ['1960s', '1980s', '2000s', '2020s']
-const VALID_OCCUPATIONS  = ['cashier', 'janitor', 'bus_driver', 'electrician', 'teacher', 'nurse', 'developer', 'lawyer', 'dentist']
+const VALID_OCCUPATIONS  = ['cashier', 'janitor', 'bus_driver', 'electrician', 'teacher', 'nurse', 'developer', 'lawyer']
 const VALID_SECTIONS     = ['about', 'explore']
 
 function readParams() {

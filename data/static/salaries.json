@@ -39,11 +39,6 @@
   {"occupation_id": "lawyer",      "city": "all", "year": 2000, "salary": 95000,  "source": "BLS OES 2000",    "confidence": "high"},
   {"occupation_id": "lawyer",      "city": "all", "year": 2020, "salary": 148000, "source": "BLS OES 2020",    "confidence": "high"},
 
-  {"occupation_id": "dentist",     "city": "all", "year": 1960, "salary": 13000,   "source": "BLS/Census 1960", "confidence": "reconstructed"},
-  {"occupation_id": "dentist",     "city": "all", "year": 1980, "salary": 38000,  "source": "BLS 1980",        "confidence": "reconstructed"},
-  {"occupation_id": "dentist",     "city": "all", "year": 2000, "salary": 120000, "source": "BLS OES 2000",    "confidence": "high"},
-  {"occupation_id": "dentist",     "city": "all", "year": 2020, "salary": 180000, "source": "BLS OES 2020",    "confidence": "high"},
-
   {"occupation_id":"cashier","city":"Los Angeles","year":2000,"salary":19500,"source":"BLS OES MSA 2000","confidence":"high"},
   {"occupation_id":"cashier","city":"Los Angeles","year":2020,"salary":29000,"source":"BLS OES MSA 2020","confidence":"high"},
   {"occupation_id":"cashier","city":"New York","year":2000,"salary":21000,"source":"BLS OES MSA 2000","confidence":"high"},
@@ -178,22 +173,5 @@
   {"occupation_id":"lawyer","city":"Houston","year":2000,"salary":98000,"source":"BLS OES MSA 2000","confidence":"high"},
   {"occupation_id":"lawyer","city":"Houston","year":2020,"salary":142000,"source":"BLS OES MSA 2020","confidence":"high"},
   {"occupation_id":"lawyer","city":"Phoenix","year":2000,"salary":92000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"lawyer","city":"Phoenix","year":2020,"salary":132000,"source":"BLS OES MSA 2020","confidence":"high"},
-
-  {"occupation_id":"dentist","city":"Los Angeles","year":2000,"salary":135000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Los Angeles","year":2020,"salary":198000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"New York","year":2000,"salary":142000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"New York","year":2020,"salary":210000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"San Francisco","year":2000,"salary":148000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"San Francisco","year":2020,"salary":225000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"Chicago","year":2000,"salary":128000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Chicago","year":2020,"salary":185000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"Seattle","year":2000,"salary":132000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Seattle","year":2020,"salary":195000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"Miami","year":2000,"salary":118000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Miami","year":2020,"salary":172000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"Houston","year":2000,"salary":115000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Houston","year":2020,"salary":168000,"source":"BLS OES MSA 2020","confidence":"high"},
-  {"occupation_id":"dentist","city":"Phoenix","year":2000,"salary":112000,"source":"BLS OES MSA 2000","confidence":"high"},
-  {"occupation_id":"dentist","city":"Phoenix","year":2020,"salary":162000,"source":"BLS OES MSA 2020","confidence":"high"}
+  {"occupation_id":"lawyer","city":"Phoenix","year":2020,"salary":132000,"source":"BLS OES MSA 2020","confidence":"high"}
 ]
