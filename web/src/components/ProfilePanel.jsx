@@ -75,10 +75,16 @@ export default function ProfilePanel({ era, occupationId, dualIncome, onOccupati
       <div className="pt-12 w-full flex items-center justify-center">
         <button
           onClick={() => onDualIncomeChange(!dualIncome)}
-          className={cn(
-            'px-4 py-2 rounded-full text-sm font-medium select-none transition-colors',
-            dualIncome ? 'bg-stone-800' : 'bg-stone-100 hover:bg-stone-200'
-          )}
+          className="px-4 py-2 rounded-full text-sm font-medium select-none"
+          style={dualIncome ? {
+            background: '#292524',
+            border:     '0.5px solid rgba(0,0,0,0.4)',
+            boxShadow:  'inset 0 2px 4px rgba(0,0,0,0.4), inset 0 -0.5px 0 rgba(255,255,255,0.06)',
+          } : {
+            background: '#f5f5f4',
+            border:     '0.5px solid rgba(0,0,0,0.12)',
+            boxShadow:  'inset 0.5px 1px 0 rgba(255,255,255,0.9), inset 0 -2px 6px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.1)',
+          }}
         >
           <span className={dualIncome ? 'text-stone-50' : 'text-stone-800'}>Two incomes </span>
           <span className="text-teal-600">+40%</span>

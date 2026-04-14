@@ -22,24 +22,28 @@ const ICONS = { about: IconAbout, explore: IconExplore }
 
 export default function Sidebar({ section, era, onSectionChange, onEraChange }) {
   return (
-    <aside className="w-[86px] shrink-0 flex flex-col justify-between pt-12 pb-12 pr-4 h-screen bg-stone-800">
+    <aside className="w-24 shrink-0 flex flex-col justify-between pt-12 pb-12 pr-4 h-screen bg-stone-800">
       {/* Top nav — fully rounded icon buttons */}
-      <div className="flex flex-col items-start gap-1 w-full pl-5">
+      <div className="flex flex-col items-start gap-3 w-full pl-5">
         {[
           { id: 'about',   label: 'About'   },
           { id: 'explore', label: 'Explore' },
         ].map(({ id, label }) => {
           const Icon = ICONS[id]
+          const active = section === id
           return (
             <button
               key={id}
               onClick={() => onSectionChange(id)}
-              className={cn(
-                'flex items-center justify-center w-10 h-10 rounded-full',
-                section === id
-                  ? 'bg-stone-600 text-stone-50'
-                  : 'text-stone-400 hover:bg-stone-700 hover:text-stone-50'
-              )}
+              className="flex items-center justify-center w-10 h-10 rounded-full transition-colors"
+              style={{
+                background:  active ? '#3a3531' : '#3f3b38',
+                border:      '0.5px solid rgba(0,0,0,0.55)',
+                boxShadow:   active
+                  ? 'inset 0 2px 5px rgba(0,0,0,0.55), inset 0 -0.5px 0 rgba(255,255,255,0.04)'
+                  : 'inset 0.5px 1px 0 rgba(255,255,255,0.1), inset 0 -2px 7px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.4)',
+                color:       active ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.6)',
+              }}
               title={label}
             >
               <Icon />
@@ -48,34 +52,47 @@ export default function Sidebar({ section, era, onSectionChange, onEraChange }) 
         })}
       </div>
 
-      {/* Era scale — tick marks from left edge, visible only in Explore */}
-      <div className={cn('flex flex-col gap-3 w-full', section !== 'explore' && 'invisible')}>
-        {ERAS.map((e) => (
-          <button
-            key={e}
-            onClick={() => onEraChange(e)}
-            className="relative flex items-center pl-6 group"
-          >
-            <div className={cn(
-              'absolute left-0 h-px',
-              era === e
-                ? 'w-4 bg-red-500'
-                : 'w-3 bg-stone-500 group-hover:bg-stone-400'
-            )} />
-            <span className={cn(
-              'text-sm leading-normal',
-              era === e
-                ? 'text-stone-50'
-                : 'text-stone-400 group-hover:text-stone-300'
-            )}>
-              {e}
-            </span>
-          </button>
-        ))}
+      {/* Era buttons — visible only in Explore */}
+      <div className={cn('flex flex-col gap-2 w-full', section !== 'explore' && 'invisible')}>
+        {ERAS.map((e) => {
+          const active = era === e
+          return (
+            <div key={e} className="relative">
+              <button
+                onClick={() => onEraChange(e)}
+                className="w-full text-sm px-3 py-2 rounded-tr-lg rounded-br-lg"
+                style={{
+                  background: active ? '#3a3531' : '#3f3b38',
+                  border:     '0.5px solid rgba(0,0,0,0.55)',
+                  boxShadow:  active
+                    ? 'inset 0 2px 5px rgba(0,0,0,0.55), inset 0 -0.5px 0 rgba(255,255,255,0.04)'
+                    : 'inset 0.5px 1px 0 rgba(255,255,255,0.1), inset 0 -2px 7px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.4)',
+                  color:      active ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.7)',
+                }}
+              >
+                {e}
+              </button>
+              <span style={{
+                position:     'absolute',
+                right:        -11,
+                top:          '50%',
+                transform:    'translateY(-50%)',
+                width:        6,
+                height:       6,
+                borderRadius: '50%',
+                background:   active
+                  ? 'radial-gradient(closest-side, rgba(42,137,112,0.85) 40%, #2a8970)'
+                  : 'rgba(255,255,255,0.2)',
+                border:       active ? 'none' : '0.5px solid rgba(0,0,0,0.1)',
+                boxShadow:    active ? '0 0 4px #2a8970' : 'none',
+              }} />
+            </div>
+          )
+        })}
       </div>
 
       {/* Invisible spacer — mirrors nav height for balance */}
-      <div className="flex flex-col gap-1 w-full pl-5 opacity-0 pointer-events-none" aria-hidden>
+      <div className="flex flex-col gap-3 w-full pl-5 opacity-0 pointer-events-none" aria-hidden>
         <div className="h-10 w-10" />
         <div className="h-10 w-10" />
       </div>
