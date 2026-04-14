@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import { cn } from '@/lib/utils'
 import cities from '@/data/cities_geo.json'
 import results from '@/data/results.json'
 
@@ -14,11 +13,6 @@ const STATUS_COLORS = {
   stretch:      '#f97316',
   unaffordable: '#ef4444',
 }
-
-const HOME_TYPES = [
-  { id: 'starter', label: 'Starter home' },
-  { id: 'median',  label: 'Median home'  },
-]
 
 // Linear interpolation between two breakpoints, clamped at both ends
 function getZoom() {
@@ -35,7 +29,7 @@ function fmt$(n) {
     : `$${(n / 1_000).toFixed(0)}K`
 }
 
-function buildGeoJSON(year, occupationId, householdId, homeKey) {
+function buildGeoJSON(year, occupationId, householdId) {
   return {
     type: 'FeatureCollection',
     features: cities.map(city => {
@@ -43,22 +37,20 @@ function buildGeoJSON(year, occupationId, householdId, homeKey) {
       const profile = entry?.profiles.find(
         p => p.occupation_id === occupationId && p.household_id === householdId
       )
-      const status  = profile?.[homeKey]?.affordability_status ?? null
+      const status  = profile?.median_home?.affordability_status ?? null
 
       return {
         type: 'Feature',
         properties: {
-          name:            city.name,
+          name:             city.name,
           status,
-          color:           STATUS_COLORS[status] ?? '#94a3b8',
+          color:            STATUS_COLORS[status] ?? '#94a3b8',
           effective_income: profile?.effective_income ?? null,
-          mortgage_rate:   entry?.market?.mortgage_rate ?? null,
-          price_to_income: profile?.[homeKey]?.price_to_income ?? null,
-          burden_pct:      profile?.[homeKey]?.burden_pct ?? null,
-          home_price:      homeKey === 'starter_home'
-            ? entry?.market?.starter_home_price ?? null
-            : entry?.market?.median_home_price ?? null,
-          confidence:      entry?.market?.confidence ?? null,
+          mortgage_rate:    entry?.market?.mortgage_rate ?? null,
+          price_to_income:  profile?.median_home?.price_to_income ?? null,
+          burden_pct:       profile?.median_home?.burden_pct ?? null,
+          home_price:       entry?.market?.median_home_price ?? null,
+          confidence:       entry?.market?.confidence ?? null,
         },
         geometry: { type: 'Point', coordinates: [city.lng, city.lat] },
       }
@@ -69,11 +61,9 @@ function buildGeoJSON(year, occupationId, householdId, homeKey) {
 export default function USMap({ era, occupationId, dualIncome }) {
   const containerRef  = useRef(null)
   const mapRef        = useRef(null)
-  const [homeType, setHomeType] = useState('starter')
   const [tooltip, setTooltip]  = useState(null)
   const tooltipRef    = useRef(null)
 
-  const homeKey     = homeType === 'starter' ? 'starter_home' : 'median_home'
   const year        = ERA_TO_YEAR[era] ?? null
   const householdId = dualIncome ? 'dual' : 'single'
 
@@ -107,7 +97,7 @@ export default function USMap({ era, occupationId, dualIncome }) {
         }
       })
 
-      const geojson = buildGeoJSON(year, occupationId, householdId, homeKey)
+      const geojson = buildGeoJSON(year, occupationId, householdId)
 
       // City dots
       map.addSource('cities', { type: 'geojson', data: geojson })
@@ -194,36 +184,15 @@ export default function USMap({ era, occupationId, dualIncome }) {
   useEffect(() => {
     const map = mapRef.current
     if (!map || !map.isStyleLoaded() || !map.getSource('cities')) return
-    const geojson = buildGeoJSON(year, occupationId, householdId, homeKey)
+    const geojson = buildGeoJSON(year, occupationId, householdId)
     map.getSource('cities').setData(geojson)
-  }, [year, occupationId, householdId, homeKey])
+  }, [year, occupationId, householdId])
 
   return (
     <div className="relative w-full h-full overflow-hidden">
 
       {/* Mapbox container */}
       <div ref={containerRef} className="w-full h-full" />
-
-      {/* Home type tabs */}
-      <div className="absolute top-0 left-0 right-0 pt-12 flex justify-center z-10 pointer-events-none">
-        <div className="pointer-events-auto flex">
-          {HOME_TYPES.map((ht, i) => (
-            <button
-              key={ht.id}
-              onClick={() => setHomeType(ht.id)}
-              className={cn(
-                'h-8 px-3 text-sm font-medium border border-border',
-                i === 0 ? 'rounded-l-[10px]' : 'rounded-r-[10px] border-l-0',
-                homeType === ht.id
-                  ? 'bg-muted text-accent-foreground'
-                  : 'bg-background text-foreground'
-              )}
-            >
-              {ht.label}
-            </button>
-          ))}
-        </div>
-      </div>
 
       {/* Tooltip */}
       {tooltip && (
@@ -235,14 +204,14 @@ export default function USMap({ era, occupationId, dualIncome }) {
             top:  tooltip.flipY ? tooltip.mouseY - 228 : tooltip.mouseY + 12,
           }}
         >
-          <TooltipContent props={tooltip.props} homeType={homeType} />
+          <TooltipContent props={tooltip.props} />
         </div>
       )}
     </div>
   )
 }
 
-function TooltipContent({ props, homeType }) {
+function TooltipContent({ props }) {
   const status = props.status
   const color  = STATUS_COLORS[status] ?? null
 
@@ -251,7 +220,7 @@ function TooltipContent({ props, homeType }) {
       <p className="font-semibold text-foreground mb-2.5">{props.name}</p>
       {props.home_price ? (
         <div className="flex flex-col gap-1">
-          <Row label={homeType === 'starter' ? 'Starter home' : 'Median home'} value={fmt$(props.home_price)} />
+          <Row label="Median home" value={fmt$(props.home_price)} />
           {props.effective_income && <Row label="Annual income" value={fmt$(props.effective_income)} />}
           {props.mortgage_rate    && <Row label="Mortgage rate" value={`${props.mortgage_rate}%`} />}
           {props.price_to_income  && <Row label="Price / income" value={`${props.price_to_income}×`} />}

@@ -1,7 +1,6 @@
 import json
 import os
 
-STARTER_HOME_RATIO = 0.82  # NAR entry-level coefficient, fixed ratio — see docs
 
 # City income coefficients for 1960 and 1980:
 # city median household income / national median household income
@@ -98,14 +97,7 @@ def calculate_profiles(price, rate, salaries, city, year, median_income):
         for hh in households:
             effective_income = base_salary * hh["multiplier"]
 
-            # median home
             ratio, monthly, burden = calculate_affordability(price, effective_income, rate)
-
-            # starter home
-            starter_price = round(price * STARTER_HOME_RATIO)
-            starter_ratio, starter_monthly, starter_burden = calculate_affordability(
-                starter_price, effective_income, rate
-            )
 
             if burden <= 28:
                 affordability_status = "comfortable"
@@ -113,13 +105,6 @@ def calculate_profiles(price, rate, salaries, city, year, median_income):
                 affordability_status = "stretch"
             else:
                 affordability_status = "unaffordable"
-
-            if starter_burden <= 28:
-                starter_affordability = "comfortable"
-            elif starter_burden <= 38:
-                starter_affordability = "stretch"
-            else:
-                starter_affordability = "unaffordable"
 
             context_flags = []
             if hh["multiplier"] == 1.0:
@@ -145,13 +130,6 @@ def calculate_profiles(price, rate, salaries, city, year, median_income):
                     "monthly_payment":      monthly,
                     "burden_pct":           burden,
                     "affordability_status": affordability_status,
-                },
-                "starter_home": {
-                    "price":                starter_price,
-                    "price_to_income":      starter_ratio,
-                    "monthly_payment":      starter_monthly,
-                    "burden_pct":           starter_burden,
-                    "affordability_status": starter_affordability,
                 },
                 "context_flags":        context_flags
             })
@@ -180,7 +158,6 @@ def run_calculations(raw_data):
             "year":  year,
             "market": {
                 "median_home_price":       price,
-                "starter_home_price":      round(price * STARTER_HOME_RATIO),
                 "median_household_income": income,
                 "mortgage_rate":           rate,
                 "price_to_income":         ratio,
